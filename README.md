@@ -1,24 +1,18 @@
 # WeatherConditions
 
-**TODO: Add description**
+A simple application that prints weather conditions fetched from [National Weather Service's Hourly Aviation Weather Observations](http://w1.weather.gov/). This is a project challenge from [Programming Elixir](https://pragprog.com/book/elixir13/programming-elixir-1-3).
 
-## Installation
+The data are only retrievable in XML format so I had to learn how to parse XML using the Erlang XML libraries.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+### Use it
 
-  1. Add `weather_conditions` to your list of dependencies in `mix.exs`:
+- Make sure you've got Erlang installed.
+- Clone the repo: `git clone git@github.com:raderj89/weather_conditions.git`
+- `cd weather_conditions`
+- Run the app from the command line: `$ ./weather_conditions <location-code>`
+  - e.g.: `$ ./weather_conditions kokc`
 
-    ```elixir
-    def deps do
-      [{:weather_conditions, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `weather_conditions` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:weather_conditions]]
-    end
-    ```
-
+### TODO:
+1. Add more tests
+2. Add documentation
+3. Scrape all the codes and match them to their locations so that users don't have to memorize codes and can look up which location codes they're interested in.
